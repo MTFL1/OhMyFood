@@ -25,6 +25,7 @@
   }
   a {
     text-decoration: none;
+
   }
   ul, 
 li {
@@ -257,6 +258,8 @@ li {
     font-size: 18px;
     font-weight: bold;
     padding-left: 15px;
+    color: #000;
+
 }
 .coeur {
     height: 22px;
@@ -269,7 +272,7 @@ li {
 }
 .coeur-vide{
     position: absolute;
-    color: black;
+    color: #000;
 }
 .coeur-plein{
     position: absolute;
@@ -296,6 +299,8 @@ li {
     font-size: 16px;
     padding-left: 15px;
     margin-bottom: 10px;
+    color: #000;
+
 }
 
 /*Footer*/
@@ -349,6 +354,7 @@ flex-direction: row;
     font-size: 20px;
     font-weight: 20px;
     padding-left: 5px;
+    color: #000;
 }
 .logo-fleche img{
     margin-left: 100px;
