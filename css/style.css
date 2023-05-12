@@ -193,8 +193,7 @@ li {
     padding-left: 12px;
   }
 
-.instructions:hover i,
-.instructions:focus i {
+.instructions:hover i{
     color: var(--primary-color);
     opacity: 1;
 }
@@ -343,7 +342,40 @@ margin-left: 20px;
 .invisible2{
     display: none;
   }
+/*****Animation du Loader****/
+.loader-back{
+    background-color: var(--lighter-background);
+    height: 100%;
+    position: fixed;
+    z-index: 1000000;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+    opacity: 0.96;
 
+    animation: fadeOut 3s forwards;
+    animation-delay: 3s;
+}
+.loader-front {
+    width: 400px;
+    display: flex;
+    margin-left: 500px;
+    margin-top: 300px;
+    opacity: 0.8;
+    
+  }
+@keyframes fadeOut {
+    0% {
+      opacity: 0.96;
+    }
+    100% {
+      display: none;
+      height: 0;
+      width: 0;
+    }
+    }
 /*********Page restaurants lpdg, lne, ldds, alf*******/
 /*Header*/
 
@@ -418,7 +450,7 @@ flex-direction: row;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;/*gère l'espace entre le menu et le check*/
+    justify-content: space-between;
     box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
     overflow: hidden;
@@ -432,14 +464,7 @@ flex-direction: row;
     padding-bottom: 0;
 
 }
-/*
-.display-prix{
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: space-between;
-}
-*/
+
 .prix{
     width: 30px;
     font-weight: bold; 
@@ -620,7 +645,7 @@ to{
     }
     /****** Media queries Desktop ***********/
 
-    @media (min-width: 1024px) {
+    @media (min-width: 992px) {
         .fonctionnement-h2{
             margin-left: 11%;
         }
