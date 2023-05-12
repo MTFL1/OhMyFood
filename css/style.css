@@ -49,7 +49,7 @@ li {
 }
 .hdr-search i {
     padding-right: 10px;
-    margin-right: -10;
+    margin-right: 10px;
 }
 .hdr {
     display: flex;
@@ -71,12 +71,27 @@ li {
     border-top: 3px solid var(--light-grey);
     flex-direction: row;  
     background-color: var(--light-background);
-    color: var(--dark-grey);
+    color: var(--black-color);
     margin: 0;
     padding-bottom: 15px;
     font-weight: bold;
     padding-top: 15px;
   }
+  .input-form{
+    background-color: var(--light-background);
+    align-items: center;
+   text-align: center;
+   font-weight: bold;
+   font-size: medium;
+   box-sizing: border-box;
+   border: none;
+   color: var(--black-color);
+    border-color: none;
+    outline:  none;
+    margin-left: 0;
+  }
+
+
 /* Section DRE*/
 
 .section-reservations{
@@ -172,6 +187,7 @@ li {
     z-index: 000000;
 }
 
+
 .instructions{
     align-items: center;
     box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.1);
@@ -181,9 +197,14 @@ li {
     background-color: var(--lighter-background);
     width: 95%;
 }
+.instructions:hover{
+    opacity: 0.9;
+    background-color: var(--light-background);
+    z-index: -12;
+    color: #9356DC;
+}
 .instructions i{
     height: 20px;
-    opacity: 0.6;
     padding-top: 6px;
     padding-left: 12px;
 }
@@ -193,10 +214,7 @@ li {
     padding-left: 12px;
   }
 
-.instructions:hover i{
-    color: var(--primary-color);
-    opacity: 1;
-}
+
 
 /* Section restaurant*/
 .section-restaurants{
@@ -259,10 +277,9 @@ li {
     font-weight: bold;
     padding-left: 15px;
     color: #000;
-
 }
 .coeur {
-    height: 22px;
+    font-size: 26px;
     padding-left: 55%;
     position: relative;
     display: flex;
@@ -326,6 +343,7 @@ li {
     gap: 8px;
     margin: 0;
     margin-left: 20px;
+    margin-bottom: 10px;
     color: var(--white-color);
 }
 .list-ftr-i i{
@@ -338,6 +356,13 @@ li {
 display: flex;
 flex-direction: column;
 margin-left: 20px;
+}
+.list-ftr-i .fa-handshake{
+    padding-right: 0;
+}
+
+.contact{
+color: var(--white-color);
 }
 .invisible2{
     display: none;
@@ -359,12 +384,12 @@ margin-left: 20px;
     animation-delay: 3s;
 }
 .loader-front {
-    width: 400px;
+    width: 300px;
     display: flex;
-    margin-left: 500px;
+    margin-left: 100px;
     margin-top: 300px;
     opacity: 0.8;
-    
+    color: #9356DC;
   }
 @keyframes fadeOut {
     0% {
@@ -394,7 +419,6 @@ flex-direction: row;
 .fleche{
     padding-top: 15px;
     font-size: 20px;
-    font-weight: 20px;
     padding-left: 5px;
     color: #000;
 }
@@ -462,7 +486,7 @@ flex-direction: row;
     width: 70%;
     padding-left: 15px;
     padding-bottom: 0;
-
+    
 }
 
 .prix{
@@ -477,13 +501,13 @@ flex-direction: row;
     padding-bottom: 0;
     font-weight: 300;
     font-size: 0.9em;
-
   }
 .text-card h3 {
     margin: 0;
     padding: 0;
     padding-bottom: 5px;
     font-size: 1em;
+
   }
   .check{
     color: transparent;
@@ -497,6 +521,7 @@ flex-direction: row;
     font-size: 1.5rem;
     transition: 0.4s;
     margin-left: 10px;
+
 }
 
  
@@ -504,7 +529,7 @@ flex-direction: row;
     width: 150px;   
     margin-top: 20px;
     margin-bottom: 50px;
-    margin-left: 122px;
+    margin-left: 160px;
     padding-left: 30px;
   }
 /***animation du menu****/
@@ -541,7 +566,22 @@ to{
     /****** Media queries tablette ***********/
     @media  (min-width: 769px){
 
-    /*********Pages d'accueil******/    
+        /******Loader******/
+        .loader-front {
+            width: 400px;
+           
+            margin-left: 280px;
+            
+          }
+    /*********Pages d'accueil******/   
+    
+    
+    .loader-front {
+        width: 400px;
+       
+        margin-left: 280px;
+        
+      }
     /*Fonctionnement*/
 
    
@@ -646,6 +686,12 @@ to{
     /****** Media queries Desktop ***********/
 
     @media (min-width: 992px) {
+
+            /******Loader******/
+            .loader-front {
+                width: 500px;
+                margin-left: 450px;
+              }
         .fonctionnement-h2{
             margin-left: 11%;
         }
