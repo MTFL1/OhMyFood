@@ -47,10 +47,7 @@ li {
 .hdr-search{
     height: 20px;
 }
-.hdr-search i {
-    padding-right: 10px;
-    margin-right: 10px;
-}
+
 .hdr {
     display: flex;
     align-items: center;
@@ -76,19 +73,21 @@ li {
     padding-bottom: 15px;
     font-weight: bold;
     padding-top: 15px;
+
   }
   .input-form{
-    background-color: var(--light-background);
-    align-items: center;
-   text-align: center;
-   font-weight: bold;
-   font-size: medium;
-   box-sizing: border-box;
-   border: none;
-   color: var(--black-color);
-    border-color: none;
-    outline:  none;
-    margin-left: 0;
+        width: 150px;
+        background-color: var(--light-background);
+        align-items: center;
+        text-align: center;
+        font-weight: bold;
+        font-size: medium;
+        box-sizing: border-box;
+        border: none;
+        color: var(--black-color);
+        border-color: none;
+        outline:  none;
+
   }
 
 
@@ -372,34 +371,77 @@ color: var(--white-color);
     background-color: var(--lighter-background);
     height: 100%;
     position: fixed;
-    z-index: 1000000;
+    z-index: 100;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
     overflow: hidden;
-    opacity: 0.96;
+    opacity: 1;
 
-    animation: fadeOut 3s forwards;
-    animation-delay: 3s;
+    animation: fadeOut 7s ease-in-out forwards;
+   
 }
-.loader-front {
-    width: 300px;
-    display: flex;
-    margin-left: 100px;
+
+  .loader{
+    margin:auto;
+    margin-bottom: 100px;
+    border: 16px solid;
+    width: 120px;
+    height: 120px;
+    margin-left: 180px;
     margin-top: 300px;
-    opacity: 0.8;
-    color: #9356DC;
+    border-top: #9356DC;
+    border-bottom: #9356DC;
+    border-radius: 50%;
+    animation: spineur 5s infinite;
   }
 @keyframes fadeOut {
     0% {
-      opacity: 0.96;
+      opacity: 1;
+    }
+    25%{
+        opacity: 0.9;
+    }
+    50%{
+        opacity: 0.8;
+    }
+    75%{
+        opacity: 0.7;
     }
     100% {
       display: none;
       height: 0;
       width: 0;
     }
+    }
+    @keyframes spineur{
+        0% {
+            transform: rotate(3600deg);
+            color: #9356DC;
+          }
+         
+          20%{
+            transform: rotate(2880deg);
+          }
+         
+          50%{
+            transform: rotate(1800deg);
+            color: #008766;
+
+          }
+        
+         
+          70%{
+            transform: rotate(720deg);
+            color: #FF79DA;
+
+          }
+          100%{
+            transform: rotate(360deg);
+            
+          }
+         
     }
 /*********Page restaurants lpdg, lne, ldds, alf*******/
 /*Header*/
