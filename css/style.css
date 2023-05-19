@@ -527,7 +527,9 @@ flex-direction: row;
     width: 70%;
     padding-left: 15px;
     padding-bottom: 0;
-    
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .prix{
