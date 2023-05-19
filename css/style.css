@@ -530,6 +530,7 @@ flex-direction: row;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    flex: 1;
 }
 
 .prix{
@@ -553,17 +554,19 @@ flex-direction: row;
 
   }
   .check{
-    color: transparent;
+    color: white;
+    background-color: var(--third-color);
+    font-size: 1.5rem;
+    transition: 0.3s;
+    margin-left: 10px;
+    width: 0;
   }
 
   
-  .check:hover{
-    color: white;
-    background-color: var(--third-color);
+  .display-ext-card:hover .check{
+    width: 20px;
     padding: 23px;
-    font-size: 1.5rem;
-    transition: 0.4s;
-    margin-left: 10px;
+
 
 }
 
