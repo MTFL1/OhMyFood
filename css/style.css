@@ -145,16 +145,15 @@ li {
 }
 /*Section Fonctionnement*/
 .section-fonctionnement{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
     justify-content: center;
     padding-bottom: 40px;
     width: 100%;
 }
 
-.fonctionnement-h2{
-    padding-left: 20px;
-    padding-bottom: 10px;
-    padding-top: 48px;
-}
+
 .bulle{
     display: flex;
     justify-content: center;
@@ -217,7 +216,6 @@ li {
 
 /* Section restaurant*/
 .section-restaurants{
-    justify-content: center;
     padding-top: 10px;
     padding-bottom: 60px;
     background-color: var(--lighter-background);
@@ -225,7 +223,7 @@ li {
 .h2-Restaurants{
     padding-top: 20px;
     padding-bottom: 0;
-    padding-left: 20px;
+    margin-left: 20px;
 }
 .card-restaurant{
     display: flex;
@@ -235,7 +233,6 @@ li {
     border-radius: 20px;
     background-color: white;
     border-radius: 20px;
-    padding: 0;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
     margin-bottom: 20px;
     margin-left: 10px;
@@ -268,23 +265,24 @@ li {
   .card-content{
     font-size: 18px;
     padding-top: 10px;
+    width: 90%;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 10px;
+    margin-left: 10px;
   }
 .nom-restaurant{
     font-size: 18px;
     font-weight: bold;
-    padding-left: 15px;
     color: #000;
 }
-.coeur {
-    font-size: 26px;
-    padding-left: 55%;
+.coeur-resto {
+    font-size: 22px;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin-right: 16px;
+    margin-bottom: 25px;
+
 }
 .coeur-vide{
     position: absolute;
@@ -305,15 +303,10 @@ li {
 .coeur-plein:hover{
     opacity: 1;
 }
-.card-restaurant .alf i{
-    padding-left: 75px;
-}
-.card-restaurant .lds i{
-    padding-right: 35px;
-}
+
 .ville-restaurant{
     font-size: 16px;
-    padding-left: 15px;
+    padding-left: 10px;
     margin-bottom: 10px;
     color: #000;
 
@@ -322,7 +315,6 @@ li {
 /*Footer*/
 .ftr{
     background-color: var(--dark-grey);
-  padding-left: 5px;
   padding-bottom: 20px;
   gap: 6px;
   color: #FFF;
@@ -389,7 +381,6 @@ color: var(--white-color);
     border: 16px solid;
     width: 120px;
     height: 120px;
-    margin-left: 180px;
     margin-top: 300px;
     border-top: #9356DC;
     border-bottom: #9356DC;
@@ -444,6 +435,9 @@ color: var(--white-color);
     }
 /*********Page restaurants lpdg, lne, ldds, alf*******/
 /*Header*/
+.banniere-restaurant{
+  width: 100%;
+}
 
 .section-menu{
     background-color: var(--lighter-background);
@@ -454,20 +448,23 @@ color: var(--white-color);
     
 }
 .logo-fleche{
-display: flex;
-flex-direction: row;
+  width:75%;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
 }
 .fleche{
+   margin-left: 10px;
     padding-top: 15px;
     font-size: 20px;
-    padding-left: 5px;
     color: #000;
+
 }
 .hdr-img2{
     height: 30px;
     padding-bottom: 15px;
     padding-top: 10px;
-    padding-left: 150px;
+
   }
 /*bannière*/
 
@@ -479,29 +476,28 @@ flex-direction: row;
 /*section menu*/
 .h1-coeur{
     font-family: 'shrikhand', sans-serif;
-    font-size: 14px;
+    width: 85%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    margin-left: 10px;
 
 }
-.h1-coeur h1{
-    padding-top: 4px;
-    margin-left: 5px;
-    padding-left: 9px;
-}
-.h1-coeur i {
-    font-size: 25px;
-    margin-left: 170px;
+.coeur-menu {
+  margin-bottom: 28px;
+  font-size: 28px;
 
 }
 /*Entrées, Plats et Desserts*/
-.section-menu h2{
+.section-menu{
+  h2{
     font-size: large;
     font-weight: lighter;
     border-bottom: 3px solid var(--third-color);
     padding-bottom: 5px;
     margin-left: 10px;
     width: 40px;
+  }
 }
 .display-menu{
     display: flex;
@@ -566,16 +562,13 @@ flex-direction: row;
   .display-ext-card:hover .check{
     width: 20px;
     padding: 23px;
-
-
 }
 
  
   .btn-c{
     width: 150px;   
-    margin-top: 20px;
-    margin-bottom: 50px;
-    margin-left: 160px;
+    margin: auto;
+    margin-bottom: 20px;
     padding-left: 30px;
   }
 /***animation du menu****/
@@ -614,10 +607,9 @@ to{
 
         /******Loader******/
         .loader{
-          
-          width: 150px;
-          height: 150px;
-          margin-left: 400px;
+          width: 250px;
+          height: 250px;
+          margin-left: 280px;
           margin-top: 300px;
           
         }
@@ -626,47 +618,39 @@ to{
     /*Fonctionnement*/
 
    
-        .fonctionnement-h2{
-            margin-left: 40%;
-        }
+       
         .bulle{
             width: 400px;
-            margin-left: 31%;
         }
     /*Restaurants*/
         .h2-Restaurants{
-        margin-left: 25px;
+        margin-left: 35px;
         }
         .card-restaurant{
           width: 90%;
           margin-left: 40px;
           margin-bottom: 40px;
         }
-       
-        .coeur{
-            padding-left: 0%;
-            margin-left: 680px;
-            font-size: 25px;
+        .card-content{
+          width: 95%;
         }
+       
+
     /*Footer*/
     .ftr{
-        flex-direction: row;
-        border: #FFF 2px solid;
-        height: 150px;
+      height: 150px;
     }
        .ftr-position{
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        margin-right: 40px ;
-        margin-top: 50px;
+        margin-right: 40px;
+        padding-top: 30px;
        }
-       .logo-ftr{
-        margin-top: -10px;
-       }
+   
        .list-ftr-i{
         flex-direction: row;
-        margin-left: 40px;
+        margin-left: 0px;
        }
  .ftr-position span{
     margin-right: 20px;
@@ -693,34 +677,36 @@ to{
             font-size: 25px;
         }
       .hdr-img2{
-        padding-left: 370px;
+        margin-right: 110px;
+
       }
         .banniere-restaurant{
             height: 400px;
         }
+        .h1-coeur{
+        width: 68%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      margin: auto;
+        }
         .display-ext-card{
         width: 600px;
-        margin-left: 20%;
         }
-        .section-menu h2{
-        margin-left: 21%;
+        .display-menu{
+          width: auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
 
-        .h1-coeur h1{
-        margin-left: 200px;
-        font-size: 25px;
-        
-        }
-        .h1-coeur i {
-        padding-left: 570px;
 
-        }
         .prix{
             margin-left: 80px;
         }
         .btn-c{
-            margin-top: 50px;
-            margin-left: 45%;
+          margin: auto;
+          margin-bottom: 20px;
         }
         
     }
@@ -737,22 +723,19 @@ to{
           margin-top: 300px;
           
         }
-        .fonctionnement-h2{
-            margin-left: 11%;
-        }
+       
         .bulle{
             display: flex;
             flex-direction: row;
-            width: 80%;
-            margin-left: 150px;
+            width: 90%;
         }
         .contenu-bulle{
-            margin: 20px;
+          padding: 10px;
         }
         .h2-Restaurants{
             padding-left: 145px;
-
             }
+            
        .display-restaurants{
         width: 80%;
         display: flex;
@@ -776,11 +759,7 @@ to{
         }
        
         
-          .coeur{
-              margin-left: 300px;
-              font-size: 20px;
-            
-            }
+
          /*Footer*/
     .ftr{
         flex-direction: row;
@@ -822,7 +801,7 @@ to{
         font-size: 25px;
     }
     .hdr-img2{
-        padding-left: 520px;
+       margin-right: 300px;
         height: 35px;
       }
     .banniere-restaurant{
@@ -832,23 +811,17 @@ to{
         margin-left: 10%;
         width: 80%;
     }
+   .h1-coeur{
+    justify-content: space-around;
+   }
+  
     .display-ext-card{
     width: 600px;
-    margin-left: 20%;
     }
-    .section-menu h2{
-    margin-left: 21%;
-    }
-
-    .h1-coeur {
-        margin-left: 30px;
-        font-size: 25px;
-    }
-    
+  
     .btn-c{
-        margin-top: 50px;
-
-        margin-left: 40%;
+      margin: auto;
+      margin-bottom: 20px;
     }
     
     }
